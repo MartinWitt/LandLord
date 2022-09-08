@@ -29,7 +29,10 @@ public abstract class AbstractGUI implements InventoryHolder {
 
     private final Plugin plugin;
     private final Map<Integer, Icon> icons;
-    protected String title, rawTitle;
+
+    protected String title;
+
+    protected String rawTitle;
     protected AbstractGUI mainMenu;
     protected boolean generateAsync;
     protected Player player;
@@ -39,25 +42,34 @@ public abstract class AbstractGUI implements InventoryHolder {
     /**
      * Creates a new main menu
      *
-     * @param plugin the plugin instance
-     * @param player the player which want to see the menu
-     * @param size   the size of the inventory. must be a multiple of 9 (starting at 0)
-     * @param title  the name of the menu - ChatColor allowed!
+     * @param plugin
+     * 		the plugin instance
+     * @param player
+     * 		the player which want to see the menu
+     * @param size
+     * 		the size of the inventory. must be a multiple of 9 (starting at 0)
+     * @param title
+     * 		the name of the menu - ChatColor allowed!
      */
-    public AbstractGUI(Plugin plugin, Player player, int size, String title) {
+    protected AbstractGUI(Plugin plugin, Player player, int size, String title) {
         this(plugin, player, size, title, null);
     }
 
     /**
      * Creates a new main menu
      *
-     * @param plugin   the plugin instance
-     * @param player   the player which want to see the menu
-     * @param size     the size of the inventory. must be a multiple of 8
-     * @param title    the name of the menu - ChatColor allowed!
-     * @param mainMenu The superior menu
+     * @param plugin
+     * 		the plugin instance
+     * @param player
+     * 		the player which want to see the menu
+     * @param size
+     * 		the size of the inventory. must be a multiple of 8
+     * @param title
+     * 		the name of the menu - ChatColor allowed!
+     * @param mainMenu
+     * 		The superior menu
      */
-    public AbstractGUI(Plugin plugin, Player player, int size, String title, AbstractGUI mainMenu) {
+    protected AbstractGUI(Plugin plugin, Player player, int size, String title, AbstractGUI mainMenu) {
         this.plugin = plugin;
         this.player = player;
         this.icons = new HashMap<>();
