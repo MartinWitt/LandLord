@@ -25,11 +25,14 @@ public abstract class AbstractItem {
     /**
      * Used to initially create a custom item stack
      *
-     * @param name    name, which should be saved inside nbt and will also be used to get the instance of this class
-     * @param stack   the item stack, which should be wrapped
-     * @param glowing if the item should be glowing or not
+     * @param name
+     * 		name, which should be saved inside nbt and will also be used to get the instance of this class
+     * @param stack
+     * 		the item stack, which should be wrapped
+     * @param glowing
+     * 		if the item should be glowing or not
      */
-    public AbstractItem(String name, ItemStack stack, boolean glowing, boolean breakBlocks) {
+    protected AbstractItem(String name, ItemStack stack, boolean glowing, boolean breakBlocks) {
         this.name = name;
         this.stack = PrincepsLib.crossVersion().addNBTTag(stack, "customItem", "true");
         this.stack = PrincepsLib.crossVersion().addNBTTag(stack, "customItemName", name);
