@@ -1,19 +1,17 @@
 package biz.princeps.landlord.guis;
-
-import biz.princeps.landlord.api.ILandLord;
-import biz.princeps.landlord.api.ILangManager;
-import biz.princeps.landlord.api.IMaterialsManager;
-import biz.princeps.landlord.api.IVaultManager;
 import biz.princeps.landlord.manager.cost.ClaimsCostManager;
-import biz.princeps.landlord.util.Skulls;
-import biz.princeps.lib.gui.simple.AbstractGUI;
-import biz.princeps.lib.gui.simple.Icon;
-import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
+import biz.princeps.landlord.api.IMaterialsManager;
 
 import java.util.ArrayList;
+import biz.princeps.landlord.util.Skulls;
+import org.bukkit.entity.Player;
+import biz.princeps.landlord.api.IVaultManager;
+import org.bukkit.inventory.ItemStack;
+import biz.princeps.lib.gui.simple.AbstractGUI;
+import biz.princeps.landlord.api.ILangManager;
+import biz.princeps.lib.gui.simple.Icon;
+import biz.princeps.landlord.api.ILandLord;
 import java.util.List;
-import java.util.logging.Level;
 
 /**
  * Project: LandLord
