@@ -9,7 +9,7 @@ public abstract class AMultiTask<T> implements IMultiTask<T> {
     protected final ILandLord plugin;
     protected final Deque<T> queue;
 
-    public AMultiTask(ILandLord plugin, Collection<T> operations) {
+    protected AMultiTask(ILandLord plugin, Collection<T> operations) {
         this.plugin = plugin;
         this.queue = new ArrayDeque<>(operations);
     }
