@@ -35,7 +35,7 @@ public abstract class MainCommand extends BukkitCommand implements Command {
      * @param perms        the perms required to execute this command
      * @param aliases      the aliases which are also viable to trigger this command
      */
-    public MainCommand(String name, String description, String usageMessage, Set<String> perms, String... aliases) {
+    protected MainCommand(String name, String description, String usageMessage, Set<String> perms, String... aliases) {
         super(name, description, usageMessage, Arrays.asList(aliases));
         this.subCommandMap = new HashMap<>();
         this.permissions = perms;
@@ -97,7 +97,7 @@ public abstract class MainCommand extends BukkitCommand implements Command {
      * @return whether the cs is allowed to execute the cmd or not
      */
     public boolean hasPermission(CommandSender cs) {
-        if (permissions.size() == 0) {
+        if (permissions.isEmpty()) {
             return true;
         }
 
