@@ -29,7 +29,7 @@ public abstract class AbstractItem {
      * @param stack   the item stack, which should be wrapped
      * @param glowing if the item should be glowing or not
      */
-    public AbstractItem(String name, ItemStack stack, boolean glowing, boolean breakBlocks) {
+    protected AbstractItem(String name, ItemStack stack, boolean glowing, boolean breakBlocks) {
         this.name = name;
         this.stack = PrincepsLib.crossVersion().addNBTTag(stack, "customItem", "true");
         this.stack = PrincepsLib.crossVersion().addNBTTag(stack, "customItemName", name);
