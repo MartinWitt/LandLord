@@ -32,7 +32,7 @@ public abstract class AWorldGuardManager implements IWorldGuardManager {
     protected final LandCache cache = new LandCache();
     protected final ILandLord plugin;
 
-    public AWorldGuardManager(ILandLord plugin) {
+    protected AWorldGuardManager(ILandLord plugin) {
         this.plugin = plugin;
     }
 
